@@ -1,0 +1,43 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically */
+  padding: 10px; /* Add padding for better spacing */
+  background-color: #C8E6C9; /* Light green background */
+}
+
+#navbar ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 20px; /* Adjust gap as needed */
+}
+
+#navbar ul li * {
+  font-family: "Livvic";
+  font-size: 16px; /* Adjust font size as needed */
+  color: #2E7D32; /* Dark green color */
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.loginSignUpBtn {
+  display: inline-block;
+  background-color: #2E7D32; /* Green button color */
+  border-radius: 10px;
+  width: 100px; /* Adjust width as needed */
+  text-align: center;
+  padding: 10px 0; /* Adjust padding as needed */
+  margin-right: 15px; /* Adjust margin as needed */
+  color: #fff; /* White text color */
+}
+
+#logo {
+  margin: 10px 0 0 15px; /* Adjust margins as needed */
+  height: 40px; /* Adjust height as needed */
+  width: 40px; /* Adjust width as needed */
+  display: block;
+}

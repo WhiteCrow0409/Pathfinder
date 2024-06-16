@@ -1,0 +1,439 @@
+/* ... (Your existing CSS code) ... */
+.login-container {
+  font-family: "ABeeZee";
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #456990, #141E30); /* Dynamic gradient */
+  color: #000000; /* White text for contrast */
+  animation: colorShift 10s linear infinite; /* Smooth color animation */
+}
+
+.parent {
+  display: flex; /* Ensure the parent container is a flex container */
+  flex-direction: column; /* Stack items vertically */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Center the parent container */
+  align-items: center; /* Center the content within the parent */
+}
+
+.right {
+  /* No longer needed */
+  /* width: 50%; */
+  /* background-color: var(--white); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make the form take up the full width of the parent */
+}
+
+.parent .right::-webkit-scrollbar{
+  width: 5px;
+  background-color: transparent;
+}
+
+.parent .right::-webkit-scrollbar-thumb{
+  background-color: var(--secPageColor);
+}
+
+
+/* Right side container of login page */
+.sign-in {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 5%;
+  margin-top: 30px;
+}
+
+.right .google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #1877f2;
+  margin: 3% 20%;
+  padding: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.googleicon {
+  width: 30px;
+}
+
+.right .login-with-google {
+  font-size: 16px;
+}
+
+.or-line {
+  display: flex;
+  justify-content: center;
+  color: gray;
+}
+
+.or-line hr {
+  width: 27%;
+  margin: auto 10px;
+  border-width: 0;
+  height: 1px;
+  background: gray;
+}
+
+.form {
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 90%; /* Make form wider for more space */
+  max-width: 450px; /* Limit maximum width for responsiveness */
+  margin: 0 auto; /* Center the form */
+}
+
+h1.counsellor {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #1877f2; /* Blue color for title */
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 2px solid #d8d8d8;
+  outline: none;
+  box-sizing: border-box;
+  padding-left: 35px;
+}
+
+.login-container input[type="checkbox"] {
+  width: unset;
+}
+label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.login-container .login_btn {
+  width: 100%;
+  padding: 16px;
+  margin: 7px 0;
+  font-size: 16px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.login-container .login_btn:hover {
+  background-color: #12229d;
+}
+
+.login-container .forgot-password {
+  text-decoration: none;
+  color: #1877f2;
+  font-size: 15px;
+}
+
+.login-container .dont-have-account {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.login-container .toggle-button {
+  cursor: pointer;
+}
+
+.get-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.get-app-title {
+  font-size: 16px;
+  color: gray;
+}
+
+.get-app .apps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.microsoft-logo {
+  width: 110px;
+}
+
+.google-play-logo {
+  width: 150px;
+}
+
+.errorMsg {
+  color: red;
+  font-size: 16px;
+}
+
+.errorShow{
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  width: 90%;
+  margin: auto;
+}
+
+input.inputField,
+input.firstname-text.inputField,
+input.surname-text.inputField,
+input.password-text.inputField,
+input.dob.inputField,
+select.inputField {
+  border-color: red;
+}
+
+.password-input {
+  position: relative;
+  width: 100%;
+}
+
+.password-input .toggle-button {
+  position: absolute;
+  width: fit-content;
+  top: 30px;
+  right: 4% !important;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+form div {
+  width: 100%;
+  text-align: start;
+}
+
+#captcha-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#captchaBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+#captcha{
+  width: 40%;
+  background: url(/src/assets/captcha.webp);
+  padding: 9px;
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(108 110 113);
+  border: 2px solid black;
+  border-radius: 6px;
+  user-select: none;
+}
+
+#captchaIcon{
+  font-size: 3rem !important;
+  cursor: pointer !important;
+  margin: 10px !important;
+}
+
+/* Form Icons */
+.iconContainer{
+  position: relative;
+}
+
+.iconContainer .icons{
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: #1877f2;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container{
+    height: 100%;
+    background-color: var(--white);
+    display: block;
+  }
+  .login-container form {
+    padding: 0 10%;
+  }
+  .right .google {
+    margin: 3% 10%;
+    padding: 10px 0;
+  }
+  .login-container form input.common-input {
+    width: 100% !important;
+  }
+  .password-input .toggle-button {
+    /* right: 5px; */
+    right:5px !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .login-container form input.common-input {
+    width: 100% !important;
+  }
+
+  .login-container form input[type="checkbox"] {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .password-input .toggle-button {
+    right: 10px !important;
+  }
+
+  .login-container{
+    width: 102vw;
+    overflow-x: hidden;
+    display: block;
+  }
+}
+
+
+.inputField {
+  border-color: red !important;
+}
+
+.errorMsg {
+  color: red;
+}
+
+.toast-message {
+  background: #12229d;
+  color: #fff;
+  font-size: 12px;
+  width: 18vw;
+  padding: 10px;
+}
+/* Update form container */
+.form {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 90%; /* Make form wider for more space */
+    max-width: 450px; /* Limit maximum width for responsiveness */
+    margin: 0 auto; /* Center the form */
+}
+
+/* Update title styles */
+h1.counsellor {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #1877f2; /* Blue color for title */
+}
+
+/* Update input fields styles */
+.login-container input[type="email"],
+.login-container input[type="password"],
+.login-container input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin: 15px 0;
+  background-color: transparent; /* Transparent background */
+  color: #333; /* Darker text color for better contrast */
+  font-size: 1.1rem;
+  transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus,
+.login-container input[type="text"]:focus {
+  border-bottom-color: #1877f2; /* Change border color on focus */
+  outline: none;
+}
+
+/* Update submit button styles */
+.login-container .login_btn {
+  background-color: #1877f2; /* Blue background for the button */
+  color: #fff; /* White text for the button */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.login-container .login_btn:hover {
+  background-color: #12229d; /* Darker blue color for hover effect */
+}
+
+/* Update other text styles */
+.sign-in,
+.login-container .forgot-password,
+.login-container .dont-have-account,
+.login-container .dont-have-account a,
+.login-container .forgot-password a {
+  color: #333; /* Darker text color */
+  font-weight: 500; /* Bold text */
+}
+
+/* Update checkbox styles */
+.login-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Update media query for smaller screens */
+@media screen and (max-width: 450px) {
+  .login-container form {
+    padding: 0;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    background: linear-gradient(to right, #456990, #141E30);
+  }
+  25% {
+    background: linear-gradient(to right, #141E30, #0081A7);
+  }
+  50% {
+    background: linear-gradient(to right, #0081A7, #203A43);
+  }
+  75% {
+    background: linear-gradient(to right, #203A43, #456990);
+  }
+  100% {
+    background: linear-gradient(to right, #456990, #141E30);
+  }
+}
+
+.right {
+  /* ... (Your existing CSS code) ... */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for form */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+}

@@ -1,0 +1,395 @@
+.signup-container {
+  font-family: "ABeeZee";
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 100vh; /* Ensure full viewport height */
+  background: linear-gradient(to right, #456990, #141E30); /* Dynamic gradient */
+  color: #fff; /* White text for contrast */
+  animation: colorShift 10s linear infinite; /* Smooth color animation */
+}
+
+.parent {
+  display: flex; /* Ensure the parent container is a flex container */
+  flex-direction: column; /* Stack items vertically */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Center the parent container */
+  align-items: center; /* Center the content within the parent */
+}
+
+.right {
+  /* No longer needed */
+  /* width: 50%; */
+  /* background-color: var(--white); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make the form take up the full width of the parent */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for form */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+}
+
+.parent .right::-webkit-scrollbar{
+  width: 5px;
+  background-color: transparent;
+}
+
+.parent .right::-webkit-scrollbar-thumb{
+  background-color: var(--secPageColor);
+}
+
+/* ... (Your existing CSS code) ... */
+
+.left {
+  display: none; /* Remove left side element */
+}
+
+h1.counsellor {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #000000; /* Blue color for title */
+}
+
+.signuptxt {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 30px;
+  color: #333; /* Darker text color */
+  font-weight: 500; /* Bold text */
+}
+
+.signuptxt2 {
+  font-size: 17px;
+  text-align: center;
+  color: gray;
+  color: #333; /* Darker text color */
+  font-weight: 500; /* Bold text */
+}
+
+.form-container {
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 90%; /* Make form wider for more space */
+  max-width: 450px; /* Limit maximum width for responsiveness */
+  margin: 0 auto; /* Center the form */
+}
+
+.form-container .name {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px; /* Add spacing between name fields */
+}
+
+.form-container input,
+select[type="gender"] {
+  width: 100%;
+  padding: 12px 10px 12px 35px; /* Consistent padding, including space for icon */
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  /* padding-left: 35px; */ /* No need to set padding-left separately */
+  transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus,
+.form-container input[type="text"]:focus,
+.form-container select[type="gender"]:focus {
+  border-bottom-color: #1877f2; /* Change border color on focus */
+  outline: none;
+}
+
+.form-container input[type="date"] {
+  cursor: pointer;
+  width: unset;
+  padding: 12px 10px 12px 35px; /* Consistent padding, including space for icon */
+  margin: 5px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  /* padding-left: 35px; */ /* No need to set padding-left separately */
+  transition: all 0.3s ease; /* Add smooth transition for hover effect */
+}
+
+label[for="student-or-counsellor"],
+label[for="date-of-birth"],
+label[for="age"] {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333; /* Darker text color */
+  font-weight: 500; /* Bold text */
+  margin-bottom: 5px; /* Add spacing between labels and input fields */
+}
+
+.twoFields {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px; /* Add spacing between input field groups */
+}
+
+span[for="counsellor-option"],
+span[for="student-option"] {
+  display: flex;
+  justify-content: flex-start; /* Align text to the left */
+  align-items: center;
+  font-size: 16px;
+  border: 2px solid #d8d8d8;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  padding: 8px 10px 8px 35px; /* Add padding for icon */
+  margin-top: 10px;
+  width: 100%;
+  color: #333; /* Darker text color */
+  font-weight: 500; /* Bold text */
+}
+
+.right .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 3% 0;
+}
+
+.right .btn .already-account a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #1877f2;
+}
+
+.submit-button {
+  font-size: 16px;
+  width: 100%;
+  background-color: #1877f2; /* Blue background for the button */
+  color: #fff; /* White text for the button */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 12px 50px;
+  margin-bottom: 8px;
+  transition: all .3s ease;
+}
+
+.submit-button:hover {
+  background-color: #12229d; /* Darker blue color for hover effect */
+}
+
+.errorMsg {
+  color: red;
+  font-size: 16px;
+}
+
+.errorShow {
+  height: 40px;
+}
+
+.errorShow p {
+  color: red;
+  text-align: center;
+  font-size: 16px;
+}
+
+input.inputField,
+input.firstname-text.inputField,
+input.surname-text.inputField,
+input.password-text.inputField,
+input.dob.inputField,
+select.inputField {
+  border-color: red;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.password-input {
+  position: relative;
+  width: 100%;
+}
+
+.password-input .toggle-button1 {
+  color: #1877f2;
+  position: absolute;
+  font-size: 20px;
+  padding: 10px 20px;
+  top: 28px;
+  right: 10px; /* Adjust for proper icon position */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#captcha-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#captchaBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+#captcha{
+  width: 40%;
+  background: url(/src/assets/captcha.webp);
+  padding: 9px;
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(108 110 113);
+  border: 2px solid black;
+  border-radius: 6px;
+  user-select: none;
+}
+
+#captchaIcon{
+  font-size: 3rem !important;
+  cursor: pointer !important;
+  margin: 10px !important;
+}
+
+/* Icon Styles  */
+.iconContainer {
+  position: relative;
+}
+
+.iconContainer .icons {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 16px;
+  color: #1877f2;
+}
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+  .signup-container{
+    height: 100%;
+    background-color: var(--white);
+    display: block;
+  }
+  .password-input .toggle-button1 {
+    right: 50px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .parent{
+    width: 104vw;
+    overflow-x: hidden;
+  }
+
+  .password-input .toggle-button1 {
+    right: 20px !important;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .password-input .toggle-button1 {
+    right: 15px;
+  }
+}
+
+/* media query */
+
+@media screen and (max-width: 992px) {
+  .parent .left img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .parent .left {
+    display: none;
+  }
+  
+  .parent .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .parent .right .form-container {
+    padding: 0 7% 3%;
+  }
+
+  .parent .right input[type="date"] {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  h1.counsellor {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .signuptxt {
+    font-size: 20px;
+  }
+
+  .parent .right input[type="date"] {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .parent .right .form-container .name {
+    width: 98%;
+  }
+
+
+  .signup-container{
+    width: 102vw;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    background: linear-gradient(to right, #456990, #141E30);
+  }
+  25% {
+    background: linear-gradient(to right, #141E30, #0081A7);
+  }
+  50% {
+    background: linear-gradient(to right, #0081A7, #203A43);
+  }
+  75% {
+    background: linear-gradient(to right, #203A43, #456990);
+  }
+  100% {
+    background: linear-gradient(to right, #456990, #141E30);
+  }
+}
